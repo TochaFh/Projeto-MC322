@@ -1,8 +1,10 @@
+package produtos;
+
 public abstract class Produto {
 
-    private int id;
-    private String nome;
-    private String descricao;
+    protected int id;
+    protected String nome;
+    protected String descricao;
 
     // Getters e setters
     public int getId() {
@@ -35,7 +37,7 @@ public abstract class Produto {
 
     public abstract double calcularPreco();
 
-    public abstract Produto clonar();
+    public abstract Produto clonarProduto(int novoId);
 
     public abstract boolean definirOpcoes();
 }

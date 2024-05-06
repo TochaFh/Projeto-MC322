@@ -1,0 +1,43 @@
+package produtos;
+
+import java.util.ArrayList;
+
+public class Combo extends Produto{
+    
+    private ArrayList<ProdutoSimples> produtosNoCombo;
+    
+    public Combo() {
+        produtosNoCombo = new ArrayList<ProdutoSimples>();
+    }
+
+    @Override
+    public double calcularPreco() {
+
+        double preco = 0;
+        for (ProdutoSimples p : produtosNoCombo) {
+            preco += p.precoNoCombo();
+        }
+        return preco;
+    }
+
+    @Override
+    public Produto clonarProduto(int novoId) {
+        Combo clone = new Combo();
+        clone.descricao = descricao;
+        clone.id = novoId;
+        clone.nome = nome;
+
+        for (ProdutoSimples p : produtosNoCombo) {
+            clone.produtosNoCombo.add((ProdutoSimples)p.clonarProduto(p.id));
+        }
+
+        return clone;
+    }
+
+    @Override
+    public boolean definirOpcoes() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'definirOpcoes'");
+    }
+
+}
