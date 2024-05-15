@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Combo extends Produto{
     
+    private static double desconto = 0.15;
     private ArrayList<ProdutoSimples> produtosNoCombo;
     
     public Combo() {
@@ -15,9 +16,10 @@ public class Combo extends Produto{
 
         double preco = 0;
         for (ProdutoSimples p : produtosNoCombo) {
-            preco += p.precoNoCombo();
+            preco += p.calcularPreco();
         }
-        return preco;
+
+        return preco - (desconto * preco);
     }
 
     @Override
