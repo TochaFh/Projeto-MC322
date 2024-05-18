@@ -37,9 +37,10 @@ public class Combo extends Produto{
     }
 
     @Override
-    public boolean definirOpcoes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'definirOpcoes'");
+    public void definirOpcoes() {
+        for (ProdutoSimples p : produtosNoCombo) {
+            p.definirOpcoes();
+        }
     }
 
 }

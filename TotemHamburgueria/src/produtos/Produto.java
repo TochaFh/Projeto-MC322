@@ -26,18 +26,18 @@ public abstract class Produto {
         this.descricao = descricao;
     }
 
-    // toString básico
+    // toString basico
     @Override
     public String toString() {
         return nome;
     }
 
     
-    // Métodos abstratos
+    // Metodos abstratos
 
     public abstract double calcularPreco();
 
     public abstract Produto clonarProduto(int novoId);
 
-    public abstract boolean definirOpcoes();
+    public abstract void definirOpcoes();
 }

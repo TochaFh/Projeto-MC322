@@ -1,5 +1,5 @@
 package enumeration;
 
 public enum Tamanho {
-    PEQUENO, MEDIO, GRANDE;
+    INDEFINIDO, PEQUENO, MEDIO, GRANDE;
 }
