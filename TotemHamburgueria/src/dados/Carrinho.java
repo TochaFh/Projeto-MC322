@@ -60,6 +60,10 @@ public class Carrinho {
         return NumberFormat.getCurrencyInstance(ptBr).format(preco);
     }
 
+    public int getSize() {
+        return produtos.size();
+    }
+
     @Override
     public String toString() {
         Locale ptBr = new Locale("pt", "BR");

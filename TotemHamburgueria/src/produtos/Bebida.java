@@ -77,6 +77,12 @@ public class Bebida extends ProdutoSimples {
         }
 
         int inputTipo = App.readInt();
+        
+        while (inputTipo > tiposBebida.length || inputTipo < 1) {
+            System.out.println("Número inválido, digite novamente:");
+            inputTipo = App.readInt();
+        }
+        
         this.nome = tiposBebida[inputTipo - 1] + " " + tam;
     }
 }

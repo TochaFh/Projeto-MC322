@@ -140,15 +140,30 @@ public class App {
             switch (comando) {
                 case "A":
                     int idItem = readInt();
-                    carrinho.adicionarProduto(cardapio.getProduto(idItem));
-                    System.out.println("Item adicionado!");
+                    if (idItem > cardapio.getSize() || idItem < 1)
+                    {
+                        System.out.println("Indice inválido, tente novamente!");
+                    }
+                    else
+                    {
+                        carrinho.adicionarProduto(cardapio.getProduto(idItem));
+                        System.out.println("Item adicionado!");
+                    }
+                    
                     break;
                 // ** parte da definição de opções tá dentro do adicionar produto no carrinho!!!
 
                 case "R":
                     int idItemRemovido = readInt();
-                    System.out.println("Item removido! (" + carrinho.getProduto(idItemRemovido) + ")");
-                    carrinho.removerProdutoPorId(idItemRemovido);
+                    if (idItemRemovido > carrinho.getSize() || idItemRemovido < 1)
+                    {
+                        System.out.println("Indice inválido, tente novamente!");
+                    }
+                    else
+                    {
+                        System.out.println("Item removido! (" + carrinho.getProduto(idItemRemovido) + ")");
+                        carrinho.removerProdutoPorId(idItemRemovido);
+                    }
                     break;
 
                 case "C":
