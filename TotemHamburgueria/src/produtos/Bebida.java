@@ -39,24 +39,34 @@ public class Bebida extends ProdutoSimples {
     // Define o tamanho e o tipo de bebida escolhido pelo cliente
     @Override
     public void definirOpcoes() {
-        System.out
-                .println("Qual o tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
+        System.out.println(
+                "Qual o tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
         String tam = "";
-        String opcao = App.readNext();
-        switch (opcao) {
-            case "P":
-                this.tamanho = Tamanho.PEQUENO;
-                tam = "pequeno";
-                break;
-            case "M":
-                this.tamanho = Tamanho.MEDIO;
-                tam = "médio";
-                break;
-            case "G":
-                this.tamanho = Tamanho.GRANDE;
-                tam = "grande";
-                break;
-        }
+
+        String opcao;
+        boolean opcaoInvalida;
+        do {
+            opcaoInvalida = false;
+            opcao = App.readNext().toUpperCase();
+            switch (opcao) {
+                case "P":
+                    this.tamanho = Tamanho.PEQUENO;
+                    tam = "pequeno(a)";
+                    break;
+                case "M":
+                    this.tamanho = Tamanho.MEDIO;
+                    tam = "médio(a)";
+                    break;
+                case "G":
+                    this.tamanho = Tamanho.GRANDE;
+                    tam = "grande";
+                    break;
+                default:
+                    System.out.println("Opção inválida, digite novamente:");
+                    opcaoInvalida = true;
+                    break;
+            }
+        } while (opcaoInvalida);
 
         System.out.println("Qual o tipo da bebida?");
 

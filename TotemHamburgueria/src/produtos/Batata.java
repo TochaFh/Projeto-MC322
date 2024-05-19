@@ -40,23 +40,35 @@ public class Batata extends ProdutoSimples {
     @Override
     public void definirOpcoes() {
         System.out
-                .println("Qual o tamanho da batata? (P) - Pequena, R$5,00; (M) - Media, R$10,00 (G) - Grande, R$15,00: ");
+                .println(
+                        "Qual o tamanho da batata? (P) - Pequena, R$5,00; (M) - Media, R$10,00 (G) - Grande, R$15,00: ");
         String tam = "";
-        String opcao = App.readNext();
-        switch (opcao) {
-            case "P":
-                this.tamanho = Tamanho.PEQUENO;
-                tam = "pequena";
-                break;
-            case "M":
-                this.tamanho = Tamanho.MEDIO;
-                tam = "média";
-                break;
-            case "G":
-                this.tamanho = Tamanho.GRANDE;
-                tam = "grande";
-                break;
-        }
+
+        String opcao;
+        boolean opcaoInvalida;
+        do {
+            opcaoInvalida = false;
+            opcao = App.readNext().toUpperCase();
+            switch (opcao) {
+                case "P":
+                    this.tamanho = Tamanho.PEQUENO;
+                    tam = "pequena";
+                    break;
+                case "M":
+                    this.tamanho = Tamanho.MEDIO;
+                    tam = "média";
+                    break;
+                case "G":
+                    this.tamanho = Tamanho.GRANDE;
+                    tam = "grande";
+                    break;
+                default:
+                    System.out.println("Opção inválida, digite novamente:");
+                    opcaoInvalida = true;
+                    break;
+            }
+        } while (opcaoInvalida);
+
         this.nome = "Batata " + tam;
     }
 }

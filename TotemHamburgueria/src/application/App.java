@@ -159,7 +159,7 @@ public class App {
                     break;
 
             }
-            System.out.println("===Carrinho===\n" + carrinho);
+            System.out.println("\n\n===Carrinho===\n" + carrinho);
             System.out.println("Total: R$" + carrinho.calculaTotal());
 
         } while (!concluir);
