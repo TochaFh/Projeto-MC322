@@ -25,3 +25,6 @@ No projeto 1, aplicação de console:
 - Pergunta se pedido é para viagem
 - Forma de Pagamento? Pix, cartão(crédito/débito), ticket refeição
 - Simulação do pagamento e envio do pedido para a cozinha
+  
+## Diagrama de Classes do Projeto:
+![Diagrama de Classes do Projeto](https://github.com/TochaFh/Projeto-MC322/assets/131920201/d8aa9abe-72f8-4a48-ad8d-d02a34793f3a)
