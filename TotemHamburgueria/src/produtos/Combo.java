@@ -2,13 +2,18 @@ package produtos;
 
 import java.util.ArrayList;
 
-public class Combo extends Produto{
-    
+public class Combo extends Produto {
+
     private static double desconto = 0.15;
     private ArrayList<ProdutoSimples> produtosNoCombo;
-    
+
     public Combo() {
         produtosNoCombo = new ArrayList<ProdutoSimples>();
+    }
+
+    public Combo(String nome, ArrayList<ProdutoSimples> produtosNoCombo) {
+        this.nome = nome;
+        this.produtosNoCombo = produtosNoCombo;
     }
 
     @Override
@@ -30,7 +35,7 @@ public class Combo extends Produto{
         clone.nome = nome;
 
         for (ProdutoSimples p : produtosNoCombo) {
-            clone.produtosNoCombo.add((ProdutoSimples)p.clonarProduto(p.id));
+            clone.produtosNoCombo.add((ProdutoSimples) p.clonarProduto(p.id));
         }
 
         return clone;
@@ -38,9 +43,22 @@ public class Combo extends Produto{
 
     @Override
     public void definirOpcoes() {
+        System.out.println("*OPÇÕES DO COMBO");
+        int i = 1;
         for (ProdutoSimples p : produtosNoCombo) {
+            System.out.println(i + ". " + p.nome + ":");
             p.definirOpcoes();
+            i++;
         }
+    }
+
+    @Override
+    public String toString() {
+        String out = nome + " - ";
+        for (ProdutoSimples p : produtosNoCombo) {
+            out += p.nome + "; ";
+        }
+        return out;
     }
 
 }

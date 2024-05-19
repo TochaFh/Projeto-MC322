@@ -1,26 +1,25 @@
 package produtos;
 
-import java.util.Scanner;
+import application.App;
 import enumeration.Tamanho;
 
 public class Bebida extends ProdutoSimples {
-    
+
     Tamanho tamanho;
 
-    public Bebida()
-    {
+    public Bebida() {
         this.tamanho = Tamanho.INDEFINIDO;
         this.preco = -1;
-        this.nome = "INDEFINIDO";
+        this.nome = "Bebida";
     }
 
     @Override
     public double calcularPreco() {
-        if(tamanho == Tamanho.PEQUENO){
+        if (tamanho == Tamanho.PEQUENO) {
             return 4;
-        }else if(tamanho == Tamanho.MEDIO){
+        } else if (tamanho == Tamanho.MEDIO) {
             return 8;
-        }else if(tamanho == Tamanho.GRANDE){
+        } else if (tamanho == Tamanho.GRANDE) {
             return 12;
         }
         return 0;
@@ -39,18 +38,34 @@ public class Bebida extends ProdutoSimples {
 
     @Override
     public void definirOpcoes() {
-        Scanner inputOpcao = new Scanner(System.in);
-        System.out.println("Qual tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
-        String opcao = inputOpcao.next();
-        switch (opcao){
+        System.out
+                .println("Qual tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
+        String tam = "";
+        String opcao = App.readNext();
+        switch (opcao) {
             case "P":
                 this.tamanho = Tamanho.PEQUENO;
+                tam = "pequeno";
+                break;
             case "M":
                 this.tamanho = Tamanho.MEDIO;
+                tam = "médio";
+                break;
             case "G":
                 this.tamanho = Tamanho.GRANDE;
+                tam = "grande";
+                break;
         }
-        inputOpcao.close();
-    }
 
+        System.out.println("Qual o tipo da bebida?");
+
+        String[] tiposBebida = App.getDADOS().getTiposDeBebida();
+
+        for (int i = 0; i < tiposBebida.length; i++) {
+            System.out.println((i + 1) + " - " + tiposBebida[i]);
+        }
+
+        int inputTipo = App.readInt();
+        this.nome = tiposBebida[inputTipo - 1] + " " + tam;
+    }
 }

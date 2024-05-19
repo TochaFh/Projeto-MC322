@@ -2,13 +2,11 @@ package produtos;
 
 public class Hamburguer extends ProdutoSimples {
 
-    public Hamburguer()
-    {
+    public Hamburguer() {
 
     }
 
-    public Hamburguer(String nome, String descricao, int preco)
-    {
+    public Hamburguer(String nome, String descricao, int preco) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;

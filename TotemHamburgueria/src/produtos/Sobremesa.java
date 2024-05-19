@@ -2,6 +2,16 @@ package produtos;
 
 public class Sobremesa extends ProdutoSimples {
 
+    public Sobremesa() {
+
+    }
+
+    public Sobremesa(String nome, String descricao, int preco) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+    }
+
     @Override
     public double calcularPreco() {
         return preco;
