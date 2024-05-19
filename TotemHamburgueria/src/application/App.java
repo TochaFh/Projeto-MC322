@@ -160,7 +160,7 @@ public class App {
 
             }
             System.out.println("\n\n===Carrinho===\n" + carrinho);
-            System.out.println("Total: R$" + carrinho.calculaTotal());
+            System.out.println("Total: " + carrinho.calculaTotal());
 
         } while (!concluir);
 
