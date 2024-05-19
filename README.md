@@ -8,6 +8,8 @@ Iran Seixas Lopes Neto - 244827
 
 Rafael Campideli Hoyos - 175100
 
+OBS.: Utilizamos o liveshare do vs code para desenvolver o projeto, por isso a maioria dos commits são apenas de uma pessoa, porém todos contribuiram para o projeto.
+
 ### Resumo:
 
 O projeto visa desenvolver um sistema de cardápio virtual para restaurantes, que pode ser aplicado a um totem de uma lanchonete, por exemplo. Através desse sistema, o cliente deve ser capaz de se identificar, ver o menu, adicionar produtos ao carrinho, personalizar os produtos, editar o carrinho, fechar o pedido  e realizar o pagamento.
