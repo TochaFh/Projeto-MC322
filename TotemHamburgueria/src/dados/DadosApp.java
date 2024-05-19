@@ -1,5 +1,6 @@
 package dados;
 
+// CLasse para centralizar os dados base do sistema
 public class DadosApp {
     
     private String nomeRestaurante;
@@ -13,14 +14,13 @@ public class DadosApp {
         this.tiposDeBebida = tiposDeBebida;
     }
 
+    // Getters
     public String getNomeRestaurante() {
         return nomeRestaurante;
     }
-
     public Carrinho getCardapio() {
         return cardapio;
     }
-
     public String[] getTiposDeBebida() {
         return tiposDeBebida;
     }

@@ -36,10 +36,11 @@ public class Bebida extends ProdutoSimples {
         return clone;
     }
 
+    // Define o tamanho e o tipo de bebida escolhido pelo cliente
     @Override
     public void definirOpcoes() {
         System.out
-                .println("Qual tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
+                .println("Qual o tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
         String tam = "";
         String opcao = App.readNext();
         switch (opcao) {

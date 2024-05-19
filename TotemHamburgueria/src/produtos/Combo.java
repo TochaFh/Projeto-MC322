@@ -16,6 +16,7 @@ public class Combo extends Produto {
         this.produtosNoCombo = produtosNoCombo;
     }
 
+    // Calcula o preco total do combo
     @Override
     public double calcularPreco() {
 
@@ -41,6 +42,7 @@ public class Combo extends Produto {
         return clone;
     }
 
+    // Define os tamanhos e tipos dos produtos do combo
     @Override
     public void definirOpcoes() {
         System.out.println("*OPÇÕES DO COMBO");

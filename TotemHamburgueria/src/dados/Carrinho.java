@@ -13,6 +13,7 @@ public class Carrinho {
         produtos = new ArrayList<Produto>();
     }
 
+    // Retorna o produto pelo seu id
     public Produto getProduto(int id) {
         return produtos.get(id - 1);
     }
@@ -38,6 +39,7 @@ public class Carrinho {
         }
     }
 
+    // Remove o produto pelo id da ArrayList
     public void removerProdutoPorId(int id) {
         for (Produto p : produtos) {
             if (p.getId() == id) {

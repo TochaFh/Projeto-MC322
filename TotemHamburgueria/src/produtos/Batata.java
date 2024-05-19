@@ -36,10 +36,11 @@ public class Batata extends ProdutoSimples {
         return clone;
     }
 
+    // Define o tamanho escolhido pelo cliente
     @Override
     public void definirOpcoes() {
         System.out
-                .println("Qual tamanho da batata? (P) - Pequena, R$5,00; (M) - Media, R$10,00 (G) - Grande, R$15,00: ");
+                .println("Qual o tamanho da batata? (P) - Pequena, R$5,00; (M) - Media, R$10,00 (G) - Grande, R$15,00: ");
         String tam = "";
         String opcao = App.readNext();
         switch (opcao) {
