@@ -18,97 +18,12 @@ public class App {
         //System.exit(0);
 
         // o banco de dados é a fonte dos dados da aplicação
-        //BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
-
-        BancoDeDados banco = new DadosHardcoded();
-
+        BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
         DADOS = banco.obterDadosApp();
 
         AppVisual appVisual = new AppVisual(DADOS);
         appVisual.iniciar();
 
-        /*System.out.println("\n--- " + DADOS.getNomeRestaurante() + " ---\nBem vindo(a)!");
-        
-        // Cadastro do cliente
-        Cliente cliente = cadastroCliente();
-
-        // Impressao do cardapio
-        Carrinho cardapio = DADOS.getCardapio(); // temporario
-
-        // Query editando o carrinho, com comandos de adicionar/remover produtos, ou
-        // concluir
-
-        Carrinho carrinho = new Carrinho();
-        Pedido pedido = new Pedido(cliente, carrinho);
-
-        System.out.println("-------------\nCARDÁPIO:\n" + cardapio + "-------------");
-
-        boolean concluir = false;
-        do {
-            System.out.println(
-                    " - Utilize os Comandos: A x (adicionar produto x) | R x (remover produto x do carrinho) | C (concluir carrinho);");
-            String comando = scan.next().toUpperCase();
-
-            switch (comando) {
-                case "A":
-                    int idItem = readInt();
-                    if (idItem > cardapio.getSize() || idItem < 1)
-                    {
-                        System.out.println("Indice inválido, tente novamente!");
-                    }
-                    else
-                    {
-                        carrinho.adicionarProduto(cardapio.getProduto(idItem));
-                        System.out.println("Item adicionado!");
-                    }
-                    
-                    break;
-                // ** parte da definição de opções tá dentro do adicionar produto no carrinho!!!
-
-                case "R":
-                    int idItemRemovido = readInt();
-                    if (idItemRemovido > carrinho.getSize() || idItemRemovido < 1)
-                    {
-                        System.out.println("Indice inválido, tente novamente!");
-                    }
-                    else
-                    {
-                        System.out.println("Item removido! (" + carrinho.getProduto(idItemRemovido) + ")");
-                        carrinho.removerProdutoPorId(idItemRemovido);
-                    }
-                    break;
-
-                case "C":
-                    concluir = true;
-                    break;
-                default:
-                    System.out.println("Comando inválido, tente novamente.");
-                    break;
-
-            }
-            System.out.println("\n\n===Carrinho===\n" + carrinho);
-            System.out.println("Total: " + carrinho.calculaTotal());
-
-        } while (!concluir);
-
-        // Define se o pedido é para viagem
-        System.out.println(" - O pedido é para viagem?(S/N): ");
-        String opcaoViagem = scan.next();
-        if (opcaoViagem.toUpperCase() == "S") {
-            pedido.setParaViagem(true);
-        } // else: Por padrão o pedido já não é para viagem
-
-        // Simulação simples de pagamento
-        System.out.println(" - Qual será a forma de pagamento? P (Pix) | D (Débito) | C (Crédito) | R (Refeição)");
-        scan.next();
-        System.out.println("Processando...");
-        System.out.println("Pagamento realizado com sucesso!");
-
-        // Impressão final do pedido
-        System.out.println(pedido);
-        System.out.println("Seu pedido foi enviado para cozinha, ele estará pronto em alguns instantes!");
-        System.out.println("Obrigado pela preferência, " + cliente + "!");
-        */
         scan.close();
     }
 

@@ -94,8 +94,21 @@ public class JanelaCardapio extends JFrame {
             warning.setText("*carrinho vazio");
             return;
         }
-        appVisual.carrinhoMontado();
+
+        String[] simNao = {"não", "sim"};
+        int opcao = JOptionPane.showOptionDialog(null,
+                                    "O pedido é para viagem?",
+                                    "Pedido",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.PLAIN_MESSAGE,
+                                    null,
+                                    simNao,
+                                    null);
+
+        appVisual.getPedido().setParaViagem(opcao == 1);
+
         setVisible(false);
+        appVisual.carrinhoMontado();
     }
 
     public void OnCarrinhoAtualizado()
@@ -108,6 +121,10 @@ public class JanelaCardapio extends JFrame {
         for (Produto produto : carrinhoCliente.getProdutos()) {
             areaCarrinho.add(new ItemNoCarrinhoPanel(produto, carrinhoCliente, this));
         }
+
+        JLabel totalCarrinho = new JLabel("Total: " + carrinhoCliente.calculaTotal());
+        totalCarrinho.setForeground(new Color(0, 71, 2));
+        areaCarrinho.add(totalCarrinho);
 
         repaint();
         revalidate();

@@ -3,16 +3,11 @@ package visual;
 import java.awt.*;
 import java.awt.event.*;
 import java.text.NumberFormat;
-import java.util.Locale;
-
 import javax.swing.*;
-
 import dados.Carrinho;
 import produtos.Produto;
 
 public class ItemNoCarrinhoPanel extends JPanel {
-
-    static Locale ptBr = new Locale("pt", "BR");
 
     private Produto produto;
     private Carrinho carrinhoCliente;
@@ -34,7 +29,7 @@ public class ItemNoCarrinhoPanel extends JPanel {
         double valorPreco = produto.calcularPreco();
         if (valorPreco > 0)
         {
-            String valorFormatado = NumberFormat.getCurrencyInstance(ptBr).format(valorPreco);
+            String valorFormatado = NumberFormat.getCurrencyInstance(ItemCardapioPanel.ptBr).format(valorPreco);
 
             JLabel preco = new JLabel("  " + valorFormatado);
             preco.setForeground(new Color(107, 0, 5));

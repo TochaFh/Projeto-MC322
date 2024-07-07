@@ -2,7 +2,6 @@ package produtos;
 
 import javax.swing.JOptionPane;
 
-import application.App;
 import enumeration.Tamanho;
 
 public class Batata extends ProdutoSimples {

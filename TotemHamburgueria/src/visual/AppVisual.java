@@ -32,8 +32,7 @@ public class AppVisual {
 
     public void iniciar()
     {
-        //mostrarCadastro();
-        mostrarCardapio(); // temporario para teste
+        mostrarCadastro();
     }
 
     private void mostrarCadastro()
@@ -57,10 +56,18 @@ public class AppVisual {
     protected void carrinhoMontado()
     {
         mostrarPagamento();
+
+        
     }
 
     private void mostrarPagamento()
     {
+        JanelaPagamento janelaPagamento = new JanelaPagamento(this);
+        janelaPagamento.iniciar();
+    }
 
+    protected void pagamentoEfetuado()
+    {
+        System.exit(0);
     }
 }

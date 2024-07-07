@@ -52,13 +52,6 @@ public class CadastroCliente extends JFrame {
         JPanel p = new JPanel();
         p.setLayout(new FlowLayout(FlowLayout.CENTER, 200, 5));
 
-        botaoConfirmar = new JButton("Confirmar");
-        botaoConfirmar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                OnConfirmarClick(e);
-            }
-        });
-
         p.add(new JLabel("Bem vindo(a)!"));
 
         p.add(new JLabel("Nome: "));
@@ -73,6 +66,12 @@ public class CadastroCliente extends JFrame {
         warning.setForeground(Color.RED);
         p.add(warning);
 
+        botaoConfirmar = new JButton("Confirmar");
+        botaoConfirmar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                OnConfirmarClick(e);
+            }
+        });
         p.add(botaoConfirmar);
 
         this.add(p, BorderLayout.CENTER);
