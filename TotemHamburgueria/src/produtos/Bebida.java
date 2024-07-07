@@ -1,5 +1,7 @@
 package produtos;
 
+import javax.swing.JOptionPane;
+
 import application.App;
 import enumeration.Tamanho;
 
@@ -36,53 +38,55 @@ public class Bebida extends ProdutoSimples {
         return clone;
     }
 
+    static String[] OPCOES_TAMANHO = {"Pequena", "Média", "Grande"};
+
+
+
     // Define o tamanho e o tipo de bebida escolhido pelo cliente
     @Override
     public void definirOpcoes() {
-        System.out.println(
-                "Qual o tamanho da bebida? (P) - Pequena, R$4,00; (M) - Media, R$8,00 (G) - Grande, R$12,00: ");
-        String tam = "";
+        
+        int opcao = JOptionPane.showOptionDialog(null,
+                                    "Qual o tamanho da BEBIDA?",
+                                    "Tamanho bebida",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.PLAIN_MESSAGE,
+                                    null,
+                                    OPCOES_TAMANHO,
+                                    "Média");
 
-        String opcao;
-        boolean opcaoInvalida;
-        do {
-            opcaoInvalida = false;
-            opcao = App.readNext().toUpperCase();
-            switch (opcao) {
-                case "P":
-                    this.tamanho = Tamanho.PEQUENO;
-                    tam = "pequeno(a)";
-                    break;
-                case "M":
-                    this.tamanho = Tamanho.MEDIO;
-                    tam = "médio(a)";
-                    break;
-                case "G":
-                    this.tamanho = Tamanho.GRANDE;
-                    tam = "grande";
-                    break;
-                default:
-                    System.out.println("Opção inválida, digite novamente:");
-                    opcaoInvalida = true;
-                    break;
-            }
-        } while (opcaoInvalida);
+        String tam;
+        switch (opcao) {
+            case 0:
+                this.tamanho = Tamanho.PEQUENO;
+                tam = "pequeno(a)";
+                break;
+            case 1:
+                this.tamanho = Tamanho.MEDIO;
+                tam = "médio(a)";
+                break;
+            case 2:
+                this.tamanho = Tamanho.GRANDE;
+                tam = "grande";
+                break;
+            default:
+                tam = "problema";
+                break;
+        }
 
-        System.out.println("Qual o tipo da bebida?");
-
+            
         String[] tiposBebida = App.getDADOS().getTiposDeBebida();
 
-        for (int i = 0; i < tiposBebida.length; i++) {
-            System.out.println((i + 1) + " - " + tiposBebida[i]);
-        }
+        opcao = JOptionPane.showOptionDialog(null,
+                                    "Qual será a bebida?",
+                                    "Escolha bebida",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.PLAIN_MESSAGE,
+                                    null,
+                                    tiposBebida,
+                                    tiposBebida[0]);
 
-        int inputTipo = App.readInt();
         
-        while (inputTipo > tiposBebida.length || inputTipo < 1) {
-            System.out.println("Número inválido, digite novamente:");
-            inputTipo = App.readInt();
-        }
-        
-        this.nome = tiposBebida[inputTipo - 1] + " " + tam;
+        this.nome = tiposBebida[opcao] + " " + tam;
     }
 }

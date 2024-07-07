@@ -44,7 +44,7 @@ public class ItemCardapioPanel extends JPanel {
         {
             String valorFormatado = NumberFormat.getCurrencyInstance(ptBr).format(valorPreco);
 
-            JLabel preco = new JLabel(" - " + valorFormatado);
+            JLabel preco = new JLabel("   " + valorFormatado);
             preco.setForeground(new Color(0, 71, 2));
             add(preco);
         }

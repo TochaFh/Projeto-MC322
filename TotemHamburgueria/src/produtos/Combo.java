@@ -45,12 +45,12 @@ public class Combo extends Produto {
     // Define os tamanhos e tipos dos produtos do combo
     @Override
     public void definirOpcoes() {
-        System.out.println("*OPÇÕES DO COMBO");
-        int i = 1;
+        //System.out.println("*OPÇÕES DO COMBO");
+        //int i = 1;
         for (ProdutoSimples p : produtosNoCombo) {
-            System.out.println(i + ". " + p.nome + ":");
+            //System.out.println(i + ". " + p.nome + ":");
             p.definirOpcoes();
-            i++;
+            //i++;
         }
     }
 

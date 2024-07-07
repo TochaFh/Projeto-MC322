@@ -32,8 +32,8 @@ public class AppVisual {
 
     public void iniciar()
     {
-        mostrarCadastro();
-        //mostrarCardapio(); // temporario para teste
+        //mostrarCadastro();
+        mostrarCardapio(); // temporario para teste
     }
 
     private void mostrarCadastro()

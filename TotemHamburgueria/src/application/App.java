@@ -18,7 +18,10 @@ public class App {
         //System.exit(0);
 
         // o banco de dados é a fonte dos dados da aplicação
-        BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
+        //BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
+
+        BancoDeDados banco = new DadosHardcoded();
+
         DADOS = banco.obterDadosApp();
 
         AppVisual appVisual = new AppVisual(DADOS);

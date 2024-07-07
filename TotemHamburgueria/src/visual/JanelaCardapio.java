@@ -1,6 +1,5 @@
 package visual;
 
-import application.*;
 import dados.*;
 import produtos.Produto;
 
@@ -107,7 +106,7 @@ public class JanelaCardapio extends JFrame {
 
         areaCarrinho.add(new JLabel("Carrinho:"));
         for (Produto produto : carrinhoCliente.getProdutos()) {
-            areaCarrinho.add(new Label(produto.getNome()));
+            areaCarrinho.add(new ItemNoCarrinhoPanel(produto, carrinhoCliente, this));
         }
 
         repaint();

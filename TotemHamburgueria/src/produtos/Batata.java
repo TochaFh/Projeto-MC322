@@ -1,5 +1,7 @@
 package produtos;
 
+import javax.swing.JOptionPane;
+
 import application.App;
 import enumeration.Tamanho;
 
@@ -39,35 +41,33 @@ public class Batata extends ProdutoSimples {
     // Define o tamanho escolhido pelo cliente
     @Override
     public void definirOpcoes() {
-        System.out
-                .println(
-                        "Qual o tamanho da batata? (P) - Pequena, R$5,00; (M) - Media, R$10,00 (G) - Grande, R$15,00: ");
-        String tam = "";
-
-        String opcao;
-        boolean opcaoInvalida;
-        do {
-            opcaoInvalida = false;
-            opcao = App.readNext().toUpperCase();
-            switch (opcao) {
-                case "P":
-                    this.tamanho = Tamanho.PEQUENO;
-                    tam = "pequena";
-                    break;
-                case "M":
-                    this.tamanho = Tamanho.MEDIO;
-                    tam = "média";
-                    break;
-                case "G":
-                    this.tamanho = Tamanho.GRANDE;
-                    tam = "grande";
-                    break;
-                default:
-                    System.out.println("Opção inválida, digite novamente:");
-                    opcaoInvalida = true;
-                    break;
-            }
-        } while (opcaoInvalida);
+        
+        int opcao = JOptionPane.showOptionDialog(null,
+                                    "Qual o tamanho da BATATA?",
+                                    "Tamanho batata",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.PLAIN_MESSAGE,
+                                    null,
+                                    Bebida.OPCOES_TAMANHO,
+                                    "Média");
+        String tam;
+        switch (opcao) {
+            case 0:
+                this.tamanho = Tamanho.PEQUENO;
+                tam = "pequena";
+                break;
+            case 1:
+                this.tamanho = Tamanho.MEDIO;
+                tam = "média";
+                break;
+            case 2:
+                this.tamanho = Tamanho.GRANDE;
+                tam = "grande";
+                break;
+            default:
+                tam = "problema";
+                break;
+        }
 
         this.nome = "Batata " + tam;
     }

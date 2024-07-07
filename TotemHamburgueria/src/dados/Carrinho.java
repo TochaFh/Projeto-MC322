@@ -35,6 +35,7 @@ public class Carrinho implements Serializable {
     public void adicionarProduto(Produto p) {
         Produto novo = p.clonarProduto(produtos.size() + 1);
         produtos.add(novo);
+        novo.definirOpcoes();
     }
 
     // Reorganiza os Ids quando algum item é removido
@@ -53,6 +54,11 @@ public class Carrinho implements Serializable {
             }
         }
         atualizarIds(id);
+    }
+
+    public void removerProduto(Produto p) {
+        produtos.remove(p);
+        atualizarIds(1);
     }
 
     // Calcula a soma dos preços dos produtos
