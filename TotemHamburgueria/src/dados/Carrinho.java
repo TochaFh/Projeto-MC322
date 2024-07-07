@@ -3,9 +3,10 @@ package dados;
 import java.util.ArrayList;
 import produtos.Produto;
 import java.util.Locale;
+import java.io.Serializable;
 import java.text.NumberFormat;
 
-public class Carrinho {
+public class Carrinho implements Serializable {
 
     private ArrayList<Produto> produtos;
 

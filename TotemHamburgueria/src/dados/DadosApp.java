@@ -1,7 +1,9 @@
 package dados;
 
+import java.io.Serializable;
+
 // CLasse para centralizar os dados base do sistema
-public class DadosApp {
+public class DadosApp implements Serializable {
     
     private String nomeRestaurante;
     private Carrinho cardapio;
