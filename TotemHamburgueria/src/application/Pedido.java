@@ -7,6 +7,11 @@ public class Pedido {
     private Carrinho carrinho;
     private boolean paraViagem;
 
+    public Pedido()
+    {
+        
+    }
+
     public Pedido(Cliente cliente, Carrinho carrinho) {
         this.cliente = cliente;
         this.carrinho = carrinho;

@@ -1,7 +1,7 @@
 package application;
 
 import dados.*;
-
+import visual.AppVisual;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,14 +14,17 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        //DadosJson.gerarArquivoDefault();
+        //DadosBinario.gerarArquivoDefault();
         //System.exit(0);
 
         // o banco de dados é a fonte dos dados da aplicação
-        BancoDeDados banco = new DadosJson("dadosapp_default.json");
+        BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
         DADOS = banco.obterDadosApp();
 
-        System.out.println("\n--- " + DADOS.getNomeRestaurante() + " ---\nBem vindo(a)!");
+        AppVisual appVisual = new AppVisual(DADOS);
+        appVisual.iniciar();
+
+        /*System.out.println("\n--- " + DADOS.getNomeRestaurante() + " ---\nBem vindo(a)!");
         
         // Cadastro do cliente
         Cliente cliente = cadastroCliente();
@@ -102,7 +105,7 @@ public class App {
         System.out.println(pedido);
         System.out.println("Seu pedido foi enviado para cozinha, ele estará pronto em alguns instantes!");
         System.out.println("Obrigado pela preferência, " + cliente + "!");
-
+        */
         scan.close();
     }
 

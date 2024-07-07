@@ -1,1 +1,220 @@
-["dados.DadosApp",{"nomeRestaurante":"Hamburgueria Daboa","cardapio":["dados.Carrinho",{"produtos":["java.util.ArrayList",[["produtos.Hamburguer",{"id":1,"nome":"Double bacon spicy","descricao":"Pão de batata, bacon, hamburguer, queijo, maionese, molho apimentado","preco":20.0}],["produtos.Hamburguer",{"id":2,"nome":"Big Columbini","descricao":"Pão de batata, bacon, hamburguer, queijo, tomate, alface, molho especial","preco":30.0}],["produtos.Hamburguer",{"id":3,"nome":"Double Australian","descricao":"Pão australiano, dois hamburgueres, duas fatias de queijo, cebola crispy, maionese verde","preco":28.0}],["produtos.Combo",{"id":4,"nome":"Combo Australiano","descricao":null,"produtosNoCombo":["java.util.ArrayList",[["produtos.Hamburguer",{"id":0,"nome":"Double Australian","descricao":"Pão australiano, dois hamburgueres, duas fatias de queijo, cebola crispy, maionese verde","preco":28.0}],["produtos.Batata",{"id":0,"nome":"Batata","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Bebida",{"id":0,"nome":"Bebida","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}]]]}],["produtos.Combo",{"id":5,"nome":"Combo Colombini","descricao":null,"produtosNoCombo":["java.util.ArrayList",[["produtos.Hamburguer",{"id":0,"nome":"Big Columbini","descricao":"Pão de batata, bacon, hamburguer, queijo, tomate, alface, molho especial","preco":30.0}],["produtos.Batata",{"id":0,"nome":"Batata","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Bebida",{"id":0,"nome":"Bebida","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}]]]}],["produtos.Combo",{"id":6,"nome":"Batata + bebida em dobro","descricao":null,"produtosNoCombo":["java.util.ArrayList",[["produtos.Batata",{"id":0,"nome":"Batata","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Batata",{"id":0,"nome":"Batata","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Bebida",{"id":0,"nome":"Bebida","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Bebida",{"id":0,"nome":"Bebida","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}]]]}],["produtos.Sobremesa",{"id":7,"nome":"Brownie","descricao":"Delicioso brownie de chocolate!","preco":8.0}],["produtos.Batata",{"id":8,"nome":"Batata","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}],["produtos.Bebida",{"id":9,"nome":"Bebida","descricao":null,"preco":-1.0,"tamanho":"INDEFINIDO"}]]],"size":9}],"tiposDeBebida":["Coca-cola","Coca-cola zero","Guaraná","Guaraná zero","Sprite","Suco de laranja","Suco de uva","Suco de limão"]}]
+[
+    "dados.DadosApp",
+    {
+        "nomeRestaurante": "Hamburgueria Daboa",
+        "cardapio": [
+            "dados.Carrinho",
+            {
+                "produtos": [
+                    "java.util.ArrayList",
+                    [
+                        [
+                            "produtos.Hamburguer",
+                            {
+                                "id": 1,
+                                "nome": "Double bacon spicy",
+                                "descricao": "Pão de batata, bacon, hamburguer, queijo, maionese, molho apimentado",
+                                "preco": 20.0
+                            }
+                        ],
+                        [
+                            "produtos.Hamburguer",
+                            {
+                                "id": 2,
+                                "nome": "Big Columbini",
+                                "descricao": "Pão de batata, bacon, hamburguer, queijo, tomate, alface, molho especial",
+                                "preco": 30.0
+                            }
+                        ],
+                        [
+                            "produtos.Hamburguer",
+                            {
+                                "id": 3,
+                                "nome": "Double Australian",
+                                "descricao": "Pão australiano, dois hamburgueres, duas fatias de queijo, cebola crispy, maionese verde",
+                                "preco": 28.0
+                            }
+                        ],
+                        [
+                            "produtos.Combo",
+                            {
+                                "id": 4,
+                                "nome": "Combo Australiano",
+                                "descricao": null,
+                                "produtosNoCombo": [
+                                    "java.util.ArrayList",
+                                    [
+                                        [
+                                            "produtos.Hamburguer",
+                                            {
+                                                "id": 0,
+                                                "nome": "Double Australian",
+                                                "descricao": "Pão australiano, dois hamburgueres, duas fatias de queijo, cebola crispy, maionese verde",
+                                                "preco": 28.0
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Batata",
+                                            {
+                                                "id": 0,
+                                                "nome": "Batata",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Bebida",
+                                            {
+                                                "id": 0,
+                                                "nome": "Bebida",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            "produtos.Combo",
+                            {
+                                "id": 5,
+                                "nome": "Combo Colombini",
+                                "descricao": null,
+                                "produtosNoCombo": [
+                                    "java.util.ArrayList",
+                                    [
+                                        [
+                                            "produtos.Hamburguer",
+                                            {
+                                                "id": 0,
+                                                "nome": "Big Columbini",
+                                                "descricao": "Pão de batata, bacon, hamburguer, queijo, tomate, alface, molho especial",
+                                                "preco": 30.0
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Batata",
+                                            {
+                                                "id": 0,
+                                                "nome": "Batata",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Bebida",
+                                            {
+                                                "id": 0,
+                                                "nome": "Bebida",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            "produtos.Combo",
+                            {
+                                "id": 6,
+                                "nome": "Batata + bebida em dobro",
+                                "descricao": null,
+                                "produtosNoCombo": [
+                                    "java.util.ArrayList",
+                                    [
+                                        [
+                                            "produtos.Batata",
+                                            {
+                                                "id": 0,
+                                                "nome": "Batata",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Batata",
+                                            {
+                                                "id": 0,
+                                                "nome": "Batata",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Bebida",
+                                            {
+                                                "id": 0,
+                                                "nome": "Bebida",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ],
+                                        [
+                                            "produtos.Bebida",
+                                            {
+                                                "id": 0,
+                                                "nome": "Bebida",
+                                                "descricao": null,
+                                                "preco": -1.0,
+                                                "tamanho": "INDEFINIDO"
+                                            }
+                                        ]
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            "produtos.Sobremesa",
+                            {
+                                "id": 7,
+                                "nome": "Brownie",
+                                "descricao": "Delicioso brownie de chocolate!",
+                                "preco": 8.0
+                            }
+                        ],
+                        [
+                            "produtos.Batata",
+                            {
+                                "id": 8,
+                                "nome": "Batata",
+                                "descricao": null,
+                                "preco": -1.0,
+                                "tamanho": "INDEFINIDO"
+                            }
+                        ],
+                        [
+                            "produtos.Bebida",
+                            {
+                                "id": 9,
+                                "nome": "Bebida",
+                                "descricao": null,
+                                "preco": -1.0,
+                                "tamanho": "INDEFINIDO"
+                            }
+                        ]
+                    ]
+                ],
+                "size": 9
+            }
+        ],
+        "tiposDeBebida": [
+            "Coca-cola",
+            "Coca-cola zero",
+            "Guaraná",
+            "Guaraná zero",
+            "Sprite",
+            "Suco de laranja",
+            "Suco de uva",
+            "Suco de limão"
+        ]
+    }
+]
