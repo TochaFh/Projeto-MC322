@@ -19,6 +19,11 @@ public class Carrinho implements Serializable {
         return produtos.get(id - 1);
     }
 
+    public ArrayList<Produto> getProdutos()
+    {
+        return produtos;
+    }
+
     // Adiciona a referência do produto direto, sem clonar ou definir opções
     // Apenas altera o id para condizer com a ordem no carrinho
     public void adicionarProdutoDireto(Produto p) {
@@ -30,7 +35,6 @@ public class Carrinho implements Serializable {
     public void adicionarProduto(Produto p) {
         Produto novo = p.clonarProduto(produtos.size() + 1);
         produtos.add(novo);
-        novo.definirOpcoes();
     }
 
     // Reorganiza os Ids quando algum item é removido

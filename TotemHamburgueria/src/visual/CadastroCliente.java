@@ -76,6 +76,6 @@ public class CadastroCliente extends JFrame {
         p.add(botaoConfirmar);
 
         this.add(p, BorderLayout.CENTER);
-        this.setVisible(rootPaneCheckingEnabled);
+        this.setVisible(true);
     }
 }
