@@ -9,6 +9,11 @@ public class DadosApp implements Serializable {
     private Carrinho cardapio;
     private String[] tiposDeBebida;
 
+    public DadosApp()
+    {
+        
+    }
+
     public DadosApp(String nomeRestaurante, Carrinho cardapio, String[] tiposDeBebida)
     {
         this.nomeRestaurante = nomeRestaurante;

@@ -14,8 +14,11 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
+        //DadosJson.gerarArquivoDefault();
+        //System.exit(0);
+
         // o banco de dados é a fonte dos dados da aplicação
-        BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
+        BancoDeDados banco = new DadosJson("dadosapp_default.json");
         DADOS = banco.obterDadosApp();
 
         System.out.println("\n--- " + DADOS.getNomeRestaurante() + " ---\nBem vindo(a)!");
