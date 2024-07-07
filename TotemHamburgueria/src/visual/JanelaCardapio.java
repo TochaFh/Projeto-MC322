@@ -74,7 +74,10 @@ public class JanelaCardapio extends JFrame {
 
         this.OnCarrinhoAtualizado();
 
-        p.add(areaCarrinho);
+        JScrollPane spcarrinho = new JScrollPane(areaCarrinho);
+        spcarrinho.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
+        p.add(spcarrinho);
 
 
         // warning
