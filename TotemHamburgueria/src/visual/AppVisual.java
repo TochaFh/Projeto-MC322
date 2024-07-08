@@ -55,9 +55,7 @@ public class AppVisual {
 
     protected void carrinhoMontado()
     {
-        mostrarPagamento();
-
-        
+        mostrarPagamento();        
     }
 
     private void mostrarPagamento()

@@ -14,13 +14,16 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
+        // * Para gerar o arquivo de dados binario default
         //DadosBinario.gerarArquivoDefault();
         //System.exit(0);
 
         // o banco de dados é a fonte dos dados da aplicação
+        // aqui etsamos usando a implementação que lê de um arquivo binario
         BancoDeDados banco = new DadosBinario("dadosapp_default_binario");
         DADOS = banco.obterDadosApp();
 
+        // as janelas do app são todas controladas pelo 'appVisual'
         AppVisual appVisual = new AppVisual(DADOS);
         appVisual.iniciar();
 
