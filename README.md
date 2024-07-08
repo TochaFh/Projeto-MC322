@@ -27,8 +27,7 @@ No projeto 2, com a interface gráfica:
 - Simulação do pagamento e envio do pedido para a cozinha. "Impressão do pedido"
   
 ## Diagrama de Classes do Projeto:
-imagem antiga ainda
-![Diagrama de Classes do Projeto](https://github.com/TochaFh/Projeto-MC322/assets/131920201/d8aa9abe-72f8-4a48-ad8d-d02a34793f3a)
+![Diagrama_P2_MC322](https://github.com/TochaFh/Projeto-MC322/assets/62609161/e765796e-e24d-4e96-a8a1-fd4f1c08a61e)
 
 ## Vídeo de apresentação e teste do programa:
-link
+https://youtu.be/TM0jC8H4YrM
